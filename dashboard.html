@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriGuide - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to NutriGuide!</h1>
+        <nav><a href="index.html">Logout</a></nav>
+    </header>
+
+    <main class="dashboard-grid">
+        <section class="guidance-card">
+            <h2>🥗 Your Nutrition Guidance</h2>
+            <p><strong>Focus for the week:</strong> Increase your fiber intake!</p>
+            <ul>
+                <li>Aim for 5 servings of fruits and vegetables daily.</li>
+                <li>Stay hydrated! Drink at least 8 glasses of water.</li>
+                <li>Replace refined grains with whole grains (oats, brown rice).</li>
+            </ul>
+            <a href="#">Read More Tips</a>
+        </section>
+
+        <section class="management-card">
+            <h2>🏃 Daily Health Tracker</h2>
+            <form id="healthTrackerForm">
+                <div class="input-inline">
+                    <label for="water">Water Intake (Glasses):</label>
+                    <input type="number" id="water" min="0" value="0">
+                </div>
+                <div class="input-inline">
+                    <label for="exercise">Exercise (Minutes):</label>
+                    <input type="number" id="exercise" min="0" value="0">
+                </div>
+                <div class="input-inline">
+                    <label for="calories">Approx. Calories Eaten:</label>
+                    <input type="number" id="calories" min="0" value="0">
+                </div>
+                <button type="submit">Save Daily Log</button>
+            </form>
+            <p id="log-status"></p>
+        </section>
+        
+        <section class="progress-card">
+            <h2>📈 Your Progress</h2>
+            <p>Last 7 Days:</p>
+            <ul>
+                <li>Avg. Water: 7 glasses</li>
+                <li>Total Exercise: 180 min</li>
+            </ul>
+            <p>Connect to a database to track your long-term goals!</p>
+        </section>
+    </main>
+
+    <script>
+        // Simple client-side action for the form
+        document.getElementById('healthTrackerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('log-status').textContent = 'Log saved successfully (Demo)!';
+            setTimeout(() => document.getElementById('log-status').textContent = '', 3000);
+        });
+    </script>
+</body>
+</html>
