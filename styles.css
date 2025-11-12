@@ -5,6 +5,15 @@ body {
     padding: 0;
     background-color: #f4f4f9;
     color: #333;
+    
+
+    /* NEW BACKGROUND STYLES */
+    background-image: url('images/your-background-image.jpg'); /* Adjust path and filename */
+    background-size: cover; /* Covers the entire viewport */
+    background-attachment: fixed; /* Keeps background still when scrolling */
+    background-position: center center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+
 }
 
 /* --- Login Page Styling (index.html) --- */
@@ -142,4 +151,5 @@ header a:hover {
     color: #4CAF50;
     font-weight: bold;
     margin-top: 15px;
+
 }
